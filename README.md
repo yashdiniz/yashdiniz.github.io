@@ -1,6 +1,8 @@
-# yashdiniz.github.io
+# {{ site.title }}
 
-There is a lot to digest here, so I'm taking it one step at a time.
+## {{ site.subtitle }}
+
+There's a lot to do here, taking stuff one step at a time.
 
 ## References
 
