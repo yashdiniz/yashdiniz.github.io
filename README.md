@@ -1,6 +1,4 @@
-# {{ site.title }}
-
-## {{ site.subtitle }}
+# yashdiniz.me
 
 There's a lot to do here, taking stuff one step at a time.
 
