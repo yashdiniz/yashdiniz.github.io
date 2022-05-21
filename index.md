@@ -1,3 +1,8 @@
-# Yash Diniz
+---
+layout: default
+---
 
+# {{site.title}}
+
+## {{site.subtitle}}
 Hey there!
