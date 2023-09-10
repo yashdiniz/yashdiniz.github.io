@@ -1,0 +1,35 @@
+---
+import Base from "./Base.astro";
+interface Props {
+	frontmatter: {
+		title: string;
+		author: string;
+		description: string;
+		date: string;
+		tags: string[];
+		image: {
+			url: string;
+			alt: string;
+		};
+	};
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Base title={frontmatter.title}>
+	<h1>{frontmatter.title}</h1>
+	<p>Written by {frontmatter.author}</p>
+	<p>{frontmatter.description}</p>
+	<p>{frontmatter.date}</p>
+	{frontmatter.tags.map((tag) => <span style="padding: 10px;">{tag}</span>)}
+	<slot />
+
+	<style>
+		body {
+			background: #f5f5f5;
+			margin: 0 auto;
+			max-width: 800px;
+		}
+	</style>
+</Base>

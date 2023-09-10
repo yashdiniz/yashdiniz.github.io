@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import "../../styles/global.css";
+
+const allposts = await Astro.glob("../posts/*.md");
+---
+
+<Base title="Posts">
+	<h1>Blog Posts</h1>
+	<p>This is where I will post about my programming journey.</p>
+	<ul>
+		{
+			allposts.map((post) => (
+				<BlogPost url={post.url} title={post.frontmatter.title} />
+			))
+		}
+	</ul>
+</Base>
