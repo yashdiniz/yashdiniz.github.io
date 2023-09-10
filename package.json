@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "ydiniz",
+  "license": "MIT",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -17,5 +18,9 @@
     "astro": "^3.0.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }
