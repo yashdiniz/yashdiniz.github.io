@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../components/shared/layouts/base/BaseLayout.astro";
+import TermBox from "../components/core/term/TermBox.astro";
+import TermLink from "../components/core/term/TermLink.astro";
+---
+
+<BaseLayout>
+	<TermBox>
+		<h1>404: Page not found</h1>
+		<p>The page you requested does not exist.</p>
+		<TermLink href='/' text='Go back home'/>
+	</TermBox>
+	<style>
+		h1 {
+			margin: 30px;
+			font-size: 1.25em;
+			text-align: center;
+			line-height: 1;
+			letter-spacing: -1px;
+		}
+		section {
+			font-size: 1em;
+		}
+	</style>
+</BaseLayout>

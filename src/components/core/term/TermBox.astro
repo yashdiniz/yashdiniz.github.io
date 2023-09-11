@@ -1,0 +1,27 @@
+<div class="termbox">
+  <slot />
+  <cursor></cursor>
+</div>
+<style>
+  .termbox {
+    margin: 200px auto;
+    padding: 20px;
+    max-width: 480px;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px lightgray;
+  }
+
+  cursor {
+    font-size: 1.5em;
+    color: #fff;
+    animation: cursoranim 1s infinite;
+  }
+  @keyframes cursoranim {
+    from {
+      border-right: 10px solid white;
+    }
+    to {
+      border-right: 10px solid transparent;
+    }
+  }
+</style>

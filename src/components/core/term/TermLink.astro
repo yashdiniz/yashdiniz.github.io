@@ -1,0 +1,24 @@
+---
+const { href, text } = Astro.props;
+---
+<span class='termlink'>
+  <a href={href}>{text}</a>
+</span>
+
+<style>
+  .termlink {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: ttyanim 1s;
+  }
+  @keyframes ttyanim {
+    from {
+      width: 0;
+    }
+    to {
+      width: 10rem;
+    }
+  }
+</style>
