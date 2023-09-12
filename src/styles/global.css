@@ -1,4 +1,6 @@
-html {
+html, body {
+  margin: 0px;
+  padding: 0px;
   background-color: #0f0f0f;
   font:
     1em "Courier",
