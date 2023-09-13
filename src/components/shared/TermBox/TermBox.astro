@@ -1,0 +1,61 @@
+---
+import TermHeader from "../../core/term/TermHeader";
+---
+
+<div class="termbox">
+  <div class="title">
+    <span>Terminal</span>
+  </div>
+  <div class="fieldset">
+    <TermHeader command="wget" client:only />
+    <slot />
+    <cursor></cursor>
+  </div>
+</div>
+
+<style>
+  .fieldset {
+    flex: 1;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid gray;
+    border-top: none;
+    font-size: 1em;
+  }
+  .termbox .title {
+    width: 100%;
+    border-bottom: 2px solid gray;
+    line-height: 0.25em;
+    margin-top: 10px;
+  }
+  .termbox .title span {
+    background: #0f0f0f;
+    color: #0f0;
+    font-weight: bold;
+  }
+  .termbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px gray;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+  cursor {
+    height: 1.5em;
+    color: #fff;
+    content: " ";
+    animation: cursoranim 0.4s infinite;
+  }
+  @keyframes cursoranim {
+    from {
+      border-left: 0.5em solid transparent;
+    }
+    to {
+      border-left: 0.5em solid white;
+    }
+  }
+</style>
