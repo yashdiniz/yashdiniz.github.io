@@ -1,24 +1,15 @@
 ---
-import BaseLayout from "../components/shared/layouts/base/BaseLayout.astro";
+import Base from "../components/shared/layouts/base/BaseLayout.astro";
 import TermBox from "../components/shared/TermBox/TermBox.astro";
 import TermLink from "../components/core/term/TermLink.astro";
 ---
 
-<BaseLayout>
+<Base title="Not Found">
   <div class="centering">
-    <div
-      style={{
-        display: "flex",
-        margin: "20px",
-        width: "50%",
-      }}
-    >
+    <div class="termbox">
       <TermBox>
         <h1>ERROR 404: Not Found.</h1>
-        <p>
-          The page you requested for does not
-          exist.
-        </p>
+        <p>The page you requested for does not exist.</p>
         <center>
                     <pre> _  _    ___  _  _
 | || |  / _ \| || |
@@ -31,31 +22,32 @@ import TermLink from "../components/core/term/TermLink.astro";
         <TermLink href="/" text="Go back home" />
       </TermBox>
     </div>
-  </div>
-</BaseLayout>
-<style>
-  .centering {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    text-align: center;
-    font-size: 1em;
-    padding: 1em;
-    border: 1px solid gray;
-  }
+    <style>
+      .centering {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1em;
+        padding: 1em;
+        border: 1px solid gray;
+      }
 
-  @media (max-width: 1080px) {
-    .centering {
-      display: block;
-      width: 100%;
-    }
-    body {
-      font-size: 2em;
-    }
-  }
-</style>
+      @media (max-width: 768px) {
+        .centering {
+          display: block;
+          width: 100vw;
+          padding-top: 130px;
+        }
+        .termbox {
+          margin: 20px;
+        }
+      }
+    </style>
+  </div>
+</Base>

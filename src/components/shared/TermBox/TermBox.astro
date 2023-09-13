@@ -1,8 +1,13 @@
 ---
 import TermHeader from "../../core/term/TermHeader";
+
+interface Props {
+  style?: any;
+}
+const { style }: Props = Astro.props;
 ---
 
-<div class="termbox">
+<div class="termbox" style={style}>
   <div class="title">
     <span>Terminal</span>
   </div>
