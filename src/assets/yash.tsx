@@ -1,4 +1,4 @@
-TODO: convert to SVG (preferably animate line by line)                                                                                                                                                      
+export default String.raw`                                                                                                                                                      
                                                                                                                                                       
                                                                                                                                                       
                                                                       -     @                                                                         
@@ -122,3 +122,5 @@ TODO: convert to SVG (preferably animate line by line)
                                                              :                                                                                        
                                                                           .                                                                           
                                                                                                                                                       
+                                                                                                                                                      
+`;
