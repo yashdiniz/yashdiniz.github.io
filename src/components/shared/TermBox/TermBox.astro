@@ -4,8 +4,10 @@ import TermHeader from "../../core/term/TermHeader";
 
 interface Props {
   style?: any;
+  command?: string;
 }
-const { style }: Props = Astro.props;
+const { style, command }: Props = Astro.props;
+let cmd = command || "wget";
 ---
 
 <div class="termbox" style={style}>
@@ -13,7 +15,7 @@ const { style }: Props = Astro.props;
     <span>Terminal</span>
   </div>
   <div class="fieldset">
-    <TermHeader command="wget" client:only />
+    <TermHeader command={cmd} client:only />
     <slot />
     <cursor></cursor>
   </div>
