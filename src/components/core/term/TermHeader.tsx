@@ -1,3 +1,4 @@
+import colors from '../../shared/colors'
 interface Props {
   /** 
    * required: command to display
@@ -29,7 +30,7 @@ export default function TermHeader({ command, args }: Props) {
       whiteSpace: 'nowrap',
     }}>
       <span style={{
-        color: '#00ff00',
+        color: colors.green,
         paddingRight: '0.5em',
       }}>%~&gt;</span>
       <span>{command}</span>

@@ -1,4 +1,5 @@
 ---
+import colors from "../colors.tsx";
 import TermHeader from "../../core/term/TermHeader";
 
 interface Props {
@@ -18,7 +19,13 @@ const { style }: Props = Astro.props;
   </div>
 </div>
 
-<style>
+<style
+  define:vars={{
+    black: colors.black,
+    green: colors.green,
+    white: colors.white,
+  }}
+>
   .fieldset {
     flex: 1;
     justify-content: space-between;
@@ -34,8 +41,8 @@ const { style }: Props = Astro.props;
     margin-top: 10px;
   }
   .termbox .title span {
-    background: #0f0f0f;
-    color: #0f0;
+    background: var(--black);
+    color: var(--green);
     font-weight: bold;
   }
   .termbox {
@@ -51,7 +58,7 @@ const { style }: Props = Astro.props;
   }
   cursor {
     height: 1.5em;
-    color: #fff;
+    color: var(--white);
     content: " ";
     animation: cursoranim 0.4s infinite;
   }
