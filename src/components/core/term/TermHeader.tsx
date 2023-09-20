@@ -1,4 +1,5 @@
 import colors from '../../shared/colors'
+
 interface Props {
   /** 
    * required: command to display
@@ -18,10 +19,21 @@ export default function TermHeader({ command, args }: Props) {
       command = `${command} ${args.join(' ')}`
     }
   }
-  // let maxlen = 42;
-  // if (command.length > maxlen) {
-  //   command = command.slice(0, maxlen) + '…'
-  // }
+
+  const cmd = command.trim().split(' ')
+    .map((word, i) => {
+      if (i == 0) {
+        return <span key={i} style={{
+          color: colors.blue,
+          paddingRight: '0.5em',
+        }}>{word}</span>
+      } else {
+        return <span key={i} style={{
+          color: colors.cyan,
+          paddingRight: '0.5em',
+        }}>{word}</span>
+      }
+    })
 
   return (
     <div style={{
@@ -33,7 +45,7 @@ export default function TermHeader({ command, args }: Props) {
         color: colors.green,
         paddingRight: '0.5em',
       }}>%~&gt;</span>
-      <span>{command}</span>
+      <span>{cmd}</span>
     </div>
   )
 }

@@ -3,7 +3,8 @@ const { href, text } = Astro.props;
 ---
 
 <span class="termlink">
-  <a href={href}>{text}</a>
+  <a href={href} target={href.startsWith("http") ? "_blank" : "_self"}>{text}</a
+  >
 </span>
 
 <style>
