@@ -17,7 +17,7 @@ let cmd = command || "wget";
   <div class="fieldset">
     <TermHeader command={cmd} client:only />
     <slot />
-    <cursor></cursor>
+    <caret></caret>
   </div>
 </div>
 
@@ -61,13 +61,13 @@ let cmd = command || "wget";
     box-shadow: 0 0 10px gray;
     cursor: default;
   }
-  cursor {
-    height: 1.5em;
+  /* emulating https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
+  caret {
     color: var(--white);
     content: " ";
-    animation: cursoranim 0.4s infinite;
+    animation: caretanim 0.4s infinite;
   }
-  @keyframes cursoranim {
+  @keyframes caretanim {
     from {
       border-left: 0.6rem solid transparent;
     }
