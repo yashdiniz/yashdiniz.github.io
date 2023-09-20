@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 128 128">
+   <!-- Yes I handwrote this svg myself. -->
+   <text x="0" y="120" class="code">&lt;</text>
+   <text x="0" y="120" id="y">Y</text>
+   <text x="52.25" y="120">D</text>
+   <text x="0" y="120" class="code">/&gt;</text>
+   <style>
+    <![CDATA[ 
+    .code {
+        font: bold 120px sans-serif;
+    }
+    #y { 
+        fill: red; 
+    }
+    text { 
+       fill: #000; font: bold 120px sans-serif; 
+    }
+    @media (prefers-color-scheme: dark) {
+       svg {
+          background: #000;
+       }
+       text { fill: #FFF; }
+    }
+    ]]>
+    </style>
+</svg>
