@@ -1,0 +1,36 @@
+---
+interface Props {
+  href: string;
+  text: string;
+  animate?: boolean;
+}
+const { href, text, animate } = Astro.props;
+const anim_width = text.length * 0.6 + "rem";
+---
+
+<span
+  class="termlink"
+  style={{
+    display: animate ? "inline-flex" : "inline",
+  }}
+>
+  <a href={href} target={href.startsWith("http") ? "_blank" : "_self"}>{text}</a
+  >
+</span>
+
+<style define:vars={{ anim_width, length: text.length }}>
+  .termlink {
+    overflow: hidden;
+    white-space: nowrap;
+    /* Thanks! https://designmodo.com/steps-css-animations */
+    animation: ttyanim 1s steps(var(--length), end);
+  }
+  @keyframes ttyanim {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--anim_width);
+    }
+  }
+</style>

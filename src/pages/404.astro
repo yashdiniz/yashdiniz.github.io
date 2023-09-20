@@ -1,0 +1,56 @@
+---
+import Base from "../components/shared/layouts/base/BaseLayout.astro";
+import TermBox from "../components/shared/TermBox/TermBox.astro";
+import TermLink from "../components/core/term/TermLink.astro";
+import AsciiSvg from "../components/core/term/TermAsciiSvg.astro";
+
+const asciiArt = String.raw` _  _    ___  _  _   
+| || |  / _ \| || |   
+| || |_| | | | || |_  
+|__   _| | | |__   _| 
+   | | | |_| |  | |   
+   |_|  \___/   |_|   
+`;
+---
+
+<Base title="Not Found">
+  <div class="centering">
+    <div class="termbox">
+      <TermBox>
+        <h1>ERROR 404: Not Found.</h1>
+        <p>The page you requested for does not exist.</p>
+        <center>
+          <AsciiSvg text={asciiArt} width="256" />
+        </center>
+        <TermLink href="/" text="Go back home" animate />
+      </TermBox>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .centering {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    list-height: 1em;
+    border: 1px solid gray;
+  }
+  @media (max-width: 768px) {
+    .centering {
+      display: block;
+      padding-top: 130px;
+    }
+    .termbox {
+      margin: 20px;
+    }
+  }
+</style>
