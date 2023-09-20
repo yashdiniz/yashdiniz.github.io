@@ -1,10 +1,42 @@
 ---
 import Base from "../components/shared/layouts/base/BaseLayout.astro";
 import AsciiSvg from "../components/core/term/TermAsciiSvg.astro";
-import Yash from "../assets/yash.tsx";
+import Termlink from "../components/core/term/TermLink.astro";
+import Termbox from "../components/shared/TermBox/TermBox.astro";
+import Yash from "../assets/asciiface.tsx";
 ---
 
 <Base title="Yash's Portfolio">
-  <!-- Credits to asciiart.eu for converting my image into monochrome ascii art -->
-  <AsciiSvg text={Yash} height="768" />
+  <div style="padding: 20px 20px 0 20px">
+    <Termbox command="neofetch whoami --source asciiface.txt ">
+      <div class="hero">
+        <!-- Credits to asciiart.eu for converting my mugshot(lol) into monochrome ascii art -->
+        <AsciiSvg text={Yash} height="512" />
+        <div>
+          <h1>Yash Diniz</h1>
+           Software Engineer, Cofounder at <Termlink
+            href="https://spyke.social"
+            text="spyke.social"
+          />
+        </div>
+      </div>
+      <Termlink href="/blog" text="Blog" />
+    </Termbox>
+  </div>
 </Base>
+<style>
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 80vh;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+</style>
