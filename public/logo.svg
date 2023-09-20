@@ -1,23 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 345 102">
    <!-- Yes I handwrote this svg myself. -->
-   <text x="0" y="120" class="code">&lt;</text>
-   <text x="0" y="120" id="y">Y</text>
-   <text x="52.25" y="120">D</text>
-   <text x="0" y="120" class="code">/&gt;</text>
+   <text x="0" y="90" class="code">&lt;</text>
+   <text x="70" y="95" id="y">Y</text>
+   <text x="122.25" y="95">D</text>
+   <text x="200" y="90" class="code">/&gt;</text>
    <style>
     <![CDATA[ 
+    @font-face {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/publicsans/v15/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuv56JxAco.woff2);
+    }
+    @font-face {
+        font-family: 'Loved by the King';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lovedbytheking/v21/Gw6gwdP76VDVJNXerebZxUMeRXUF2MiKn3A.woff2);
+    }
     .code {
-        font: bold 120px sans-serif;
+        font: 120px "Loved by the King", monospace;
+        fill: #7ed957;
     }
     #y { 
         fill: red; 
     }
     text { 
-       fill: #000; font: bold 120px sans-serif; 
+       fill: #000; font: bold 120px "Public Sans", sans-serif; 
     }
     @media (prefers-color-scheme: dark) {
        svg {
-          background: #000;
+          background: #0f0f0f;
        }
        text { fill: #FFF; }
     }
