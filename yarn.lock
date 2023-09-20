@@ -60,7 +60,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^1.0.3":
+"@astrojs/mdx@npm:^1.1.0":
   version: 1.1.0
   resolution: "@astrojs/mdx@npm:1.1.0"
   dependencies:
@@ -168,7 +168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.22.1, @babel/core@npm:^7.22.10, @babel/core@npm:^7.22.9":
+"@babel/core@npm:^7.22.1, @babel/core@npm:^7.22.10, @babel/core@npm:^7.22.20, @babel/core@npm:^7.22.9":
   version: 7.22.20
   resolution: "@babel/core@npm:7.22.20"
   dependencies:
@@ -5969,10 +5969,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ydiniz@workspace:."
   dependencies:
-    "@astrojs/mdx": ^1.0.3
+    "@astrojs/mdx": ^1.1.0
     "@astrojs/preact": ^3.0.0
     "@astrojs/react": ^3.0.2
     "@astrojs/rss": ^3.0.0
+    "@babel/core": ^7.22.20
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
     astro: ^3.0.12
@@ -5981,6 +5982,7 @@ __metadata:
     prettier-plugin-astro: ^0.12.0
     react: ^18.0.0
     react-dom: ^18.0.0
+    vite: ^4.4.9
   languageName: unknown
   linkType: soft
 
