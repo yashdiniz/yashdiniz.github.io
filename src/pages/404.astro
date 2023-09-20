@@ -25,32 +25,33 @@ const asciiArt = String.raw` _  _    ___  _  _
         <TermLink href="/" text="Go back home" />
       </TermBox>
     </div>
-    <style>
-      .centering {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-      }
-      h1 {
-        text-align: center;
-        font-size: 1em;
-        padding: 1em;
-        border: 1px solid gray;
-      }
-
-      @media (max-width: 768px) {
-        .centering {
-          display: block;
-          width: 100vw;
-          padding-top: 130px;
-        }
-        .termbox {
-          margin: 20px;
-        }
-      }
-    </style>
   </div>
 </Base>
+
+<style>
+  .centering {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    list-height: 1em;
+    border: 1px solid gray;
+  }
+  @media (max-width: 768px) {
+    .centering {
+      display: block;
+      width: 100vw;
+      padding-top: 130px;
+    }
+    .termbox {
+      margin: 20px;
+    }
+  }
+</style>
