@@ -11,7 +11,7 @@ let cmd = command || "wget";
 ---
 
 <div class="termbox" style={style}>
-  <div class="title">
+  <div class="title noselect">
     <span>Terminal</span>
   </div>
   <div class="fieldset">
@@ -47,6 +47,11 @@ let cmd = command || "wget";
     color: var(--green);
     font-weight: bold;
   }
+  .noselect {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
   .termbox {
     flex: 1;
     display: flex;
@@ -54,9 +59,7 @@ let cmd = command || "wget";
     padding: 5px;
     border: 1px solid gray;
     box-shadow: 0 0 10px gray;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+    cursor: default;
   }
   cursor {
     height: 1.5em;
@@ -66,10 +69,10 @@ let cmd = command || "wget";
   }
   @keyframes cursoranim {
     from {
-      border-left: 0.5em solid transparent;
+      border-left: 0.6rem solid transparent;
     }
     to {
-      border-left: 0.5em solid white;
+      border-left: 0.6rem solid white;
     }
   }
 </style>
