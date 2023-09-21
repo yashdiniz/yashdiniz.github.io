@@ -1,34 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 345 102">
    <!-- Yes I handwrote this svg myself. -->
-   <text x="0" y="90" class="code">&lt;</text>
-   <text x="70" y="95" id="y">Y</text>
-   <text x="122.25" y="95">D</text>
+   <text x="0" y="80" class="code">&lt;</text>
+   <text x="65" y="95" id="y">Y</text>
+   <text x="115.125" y="95">D</text>
    <text x="200" y="90" class="code">/&gt;</text>
    <style>
     <![CDATA[ 
     @font-face {
         font-family: 'Public Sans';
         font-style: normal;
-        font-weight: 900;
+        font-weight: 800;
         font-display: swap;
-        src: url(https://fonts.gstatic.com/s/publicsans/v15/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuv56JxAco.woff2);
+        src: url(https://fonts.gstatic.com/s/publicsans/v15/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymu8Z6JxAco.woff2);
     }
+    /* @font-face { */
+    /*      font-family: 'Roboto'; */
+    /*      font-style: normal; */
+    /*      font-weight: 700; */
+    /*      font-display: swap; */
+    /*      src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2'); */
+    /* } */
+    /* @font-face { */
+    /*     font-family: 'Salsa'; */
+    /*     font-style: normal; */
+    /*     font-weight: 400; */
+    /*     font-display: swap; */
+    /*     src: url(https://fonts.gstatic.com/s/salsa/v21/gNMKW3FiRpKj-hmf-HY.woff2); */
+    /* } */
     @font-face {
-        font-family: 'Loved by the King';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/lovedbytheking/v21/Gw6gwdP76VDVJNXerebZxUMeRXUF2MiKn3A.woff2);
+         font-family: 'Itim';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: url(https://fonts.gstatic.com/s/itim/v14/0nknC9ziJOYe8ANAkA.woff2);
     }
     .code {
-        font: 120px "Loved by the King", monospace;
+        font: 120px "Itim", monospace;
         fill: #7ed957;
     }
     #y { 
-        fill: red; 
+        fill: #ff3131; 
     }
     text { 
-       fill: #000; font: bold 120px "Public Sans", sans-serif; 
+       fill: #000; font: 120px "Public Sans", sans-serif; 
     }
     @media (prefers-color-scheme: dark) {
        svg {
