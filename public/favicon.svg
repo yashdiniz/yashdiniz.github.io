@@ -1,20 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 128 128">
-    <!-- Yes I handwrote this svg myself. -->
-    <text x="-120" y="120" id="y">Y<animate
-            attributeName="y"
-            values="120; 60; 120"
-            dur="1s"
-            repeatCount="indefinite"
-        /></text>
-    <text x="52.25" y="120">D</text>
-    <style>
+   <!-- Yes I handwrote this svg myself. -->
+   <text x="0" y="120">Yd</text>
+   <style>
     <![CDATA[ 
-    #y { 
-        fill: red; 
-        rotate: -90deg;
-    }
     text { 
-       fill: #000; font: bold 120px sans-serif;
+       fill: #000; font: 120px sans-serif; letter-spacing: -15px;
     }
     @media (prefers-color-scheme: dark) {
        svg {
