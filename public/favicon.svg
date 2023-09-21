@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 128 128">
    <!-- Yes I handwrote this svg myself. -->
-   <text x="0" y="120">Yd</text>
+   <text x="0" y="120">Yd<animate
+         attributeName="fill"
+         values="#444;#f44;#ff4;#fff;#4ff;#44f;#444"
+         dur="5s"
+         repeatCount="indefinite"
+      /></text>
    <style>
     <![CDATA[ 
     text { 
