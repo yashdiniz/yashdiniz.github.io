@@ -8,13 +8,13 @@ import Yash from "../assets/asciiface.tsx";
 ---
 
 <Base title="Yash's Portfolio">
-  <div style="padding: 20px 20px 0 20px">
+  <div style="margin: 20px 20px 40px 20px">
     <Termbox command="neofetch whoami --source ascii.txt ">
       <div class="hero">
         <!-- Mugshot to asciiart credits: asciiart.eu -->
         <AsciiSvg text={Yash} height="100%" />
         <div>
-          <h1 style={{ color: colors.yellow }}>Yash Diniz</h1>
+          <h1>Yash Diniz</h1>
           <p>👨‍💻 Software Engineer</p>
           <p>
             At <Termlink href="https://spyke.social" text="Spyke Social" />.
@@ -25,7 +25,65 @@ import Yash from "../assets/asciiface.tsx";
       <Termlink href="#about" text="Scroll down…" animate />
     </Termbox>
   </div>
-  <style>
+  <div style="margin: 80px auto; padding: 10px; max-width: 768px;" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am determined about solving the world's problems through my skills. Have
+      built nodeJS/expressJS servers, and recently completed projects in Go.
+      Passionate about how to optimize code to improve performance, hence prefer
+      minimalistic and simple solutions for both the user and developer.
+      Advocate of DRY, using design patterns to make code maintainable. Ready to
+      trade DRY for maintainable code.
+    </p>
+    <p>
+      I consider Security equally important, and strive to ensure that the
+      software I design and help build is as secure as I can make it. Always
+      interested in system design, machine intelligence, IoT and data analytics.
+      Good at documentation. Prefer modularity in coding and micro-service
+      architectures.
+    </p>
+    <h2>Projects</h2>
+    <p>
+      Here are some projects I've worked on. FOCUSA, ASMDV, QMjs, NPWS, FRUI,
+      Some Parking Solution Hobbies include reading, learning, coding, and
+      documentation. I prefer being the one who works behind the scenes, not
+      entering the limelight, changing one life at a time. Other recent
+      interests include GraphQL, pouchDB & couchDB, Promises, oneM2M and
+      participating in hackathons. Currently a software architect at Spyke
+      Social.
+    </p>
+    <h2>Previous Experience</h2>
+    <p>
+      DearJarvis Helped organise hackathons like debuggerX and Inspirathon.
+      Participated at the Smart Panaji Hackathon 2020 and proposed this solution
+      for the Smart Mobility Challenge. Reached the quarter-finals of the IICDC
+      2019.
+    </p>
+    <h2>Caveats</h2>
+    <p>
+      I believed that databases were really inefficient and slow, and just too
+      complex at attempting to be an all-in-one solution and failing miserably.
+      Thus, I had created my own doc-store using nodeJS, which gave the server a
+      huge performance boost. While mine isn't public yet due to long term
+      performance issues, CouchDB caters to everything my implementation suffers
+      from, but better. I am addicted to learning and continuously discovering
+      new things, and I love to experience the thrill and joy of building new
+      applications. I tend to choose this sometimes over food, sleep, and even
+      hygiene. I am working on my time management. Recently discovered energy
+      management, and that really vibed with the way I operate. I normally like
+      to explain a lot and provide detailed descriptions for any question asked.
+      Being brief is something I've been working on.
+    </p>
+  </div>
+  <style define:vars={{ yellow: colors.yellow }}>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--yellow);
+    }
     .hero {
       display: flex;
       flex-direction: row;
