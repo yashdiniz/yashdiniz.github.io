@@ -7,10 +7,10 @@ import Termbox from "../components/shared/TermBox/TermBox.astro";
 import Yash from "../assets/asciiface.tsx";
 ---
 
-<Base title="Yash's Portfolio">
-  <div style="margin: 20px 20px 40px 20px">
+<Base title="Yash Diniz">
+  <div style="margin: 20px 20px 40px 20px;">
     <Termbox command="neofetch whoami --source ascii.txt ">
-      <div class="hero">
+      <div id="hero">
         <!-- Mugshot to asciiart credits: asciiart.eu -->
         <AsciiSvg text={Yash} height="100%" animate />
         <div>
@@ -84,7 +84,7 @@ import Yash from "../assets/asciiface.tsx";
     h6 {
       color: var(--yellow);
     }
-    .hero {
+    #hero {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -94,7 +94,7 @@ import Yash from "../assets/asciiface.tsx";
       padding-bottom: 20px;
     }
     @media (max-width: 768px) {
-      .hero {
+      #hero {
         flex-direction: column;
         height: 100%;
       }
