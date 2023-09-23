@@ -17,21 +17,28 @@ const maxlen = Math.max(...lines.map((line) => line.length));
   width={width}
   height={height}
 >
-  {
-    lines.map((line, index) => (
-      <text x="5" y={index * 17}>
-        {line}
-        {animate && (
-          <animate
-            attributeName="x"
-            values="0;50;0;-50;0"
-            dur="180s"
-            repeatCount="indefinite"
-          />
-        )}
-      </text>
-    ))
-  }
+  <g id="text"
+    >{
+      lines.map((line, index) => (
+        <text x="5" y={index * 17}>
+          {line}
+        </text>
+      ))
+    }
+    {
+      animate && (
+        <!-- https://stackoverflow.com/a/54657450/13227113 -->
+        <animateTransform
+          attributeType="XML"
+          attributeName="transform"
+          type="translate"
+          values="0 0; 50 20; 0 0; -50 20; 0 0"
+          dur="120s"
+          repeatCount="indefinite"
+        />
+      )
+    }
+  </g>
   <style>
     text {
       fill: #fff;
