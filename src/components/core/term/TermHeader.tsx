@@ -1,4 +1,5 @@
 import colors from '../../shared/colors'
+import { Show } from 'solid-js'
 
 interface Props {
   /** 
@@ -10,6 +11,7 @@ interface Props {
   */
   args?: string[];
 }
+
 export default function TermHeader({ command, args }: Props) {
   if (command == 'wget') {
     let url = `${document.location.host}${document.location.pathname}`
@@ -23,14 +25,14 @@ export default function TermHeader({ command, args }: Props) {
   const cmd = command.trim().split(' ')
     .map((word, i) => {
       if (i == 0) {
-        return <span key={i} style={{
+        return <span style={{
           color: colors.blue,
-          paddingRight: '0.5em',
+          'padding-right': '0.5em',
         }}>{word}</span>
       } else {
-        return <span key={i} style={{
+        return <span style={{
           color: colors.cyan,
-          paddingRight: '0.5em',
+          'padding-right': '0.5em',
         }}>{word}</span>
       }
     })
@@ -38,14 +40,14 @@ export default function TermHeader({ command, args }: Props) {
   return (
     <div style={{
       overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
+      'text-overflow': 'ellipsis',
+      'white-space': 'nowrap',
     }}>
       <span style={{
         color: colors.green,
-        paddingRight: '0.5em',
+        'padding-right': '0.5em',
       }}>%~&gt;</span>
-      <span>{cmd}</span>
+      {cmd}
     </div>
   )
 }

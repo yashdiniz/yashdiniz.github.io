@@ -12,16 +12,13 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.0",
-    "@astrojs/preact": "^3.0.0",
-    "@astrojs/react": "^3.0.2",
     "@astrojs/rss": "^3.0.0",
+    "@astrojs/solid-js": "^3.0.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.0.12",
     "astro-icon": "^0.8.1",
-    "preact": "^10.6.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "solid-js": "^1.7.12"
   },
   "devDependencies": {
     "@babel/core": "^7.22.20",
