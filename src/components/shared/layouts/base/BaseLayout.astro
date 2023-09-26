@@ -33,13 +33,17 @@ const { title }: Props = Astro.props;
       </a>
     </footer>
     <script>
-      function changeCss() {
+      function changeCss(e) {
+        // https://stackoverflow.com/questions/1769584/get-position-of-element-by-javascript
+        var hero = document.querySelector("#hero").getBoundingClientRect();
         var footer = document.querySelector("footer");
-        this.scrollY > 100
+        window.innerHeight - hero.bottom > 125
           ? (footer.style.opacity = 1)
           : (footer.style.opacity = 0);
       }
+      changeCss();
       window.addEventListener("scroll", changeCss, false);
+      window.addEventListener("resize", changeCss, false);
     </script>
   </body>
 </html>
