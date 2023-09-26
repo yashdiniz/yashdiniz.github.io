@@ -1,5 +1,4 @@
 import colors from '../../shared/colors'
-import { Show } from 'solid-js'
 
 interface Props {
   /** 

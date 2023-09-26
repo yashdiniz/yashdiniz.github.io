@@ -4,9 +4,10 @@ import { Icon } from "astro-icon";
 
 interface Props {
   title: string;
+  showFooter?: boolean;
 }
 
-const { title }: Props = Astro.props;
+const { title, showFooter }: Props = Astro.props;
 ---
 
 <html lang="en">
@@ -21,17 +22,21 @@ const { title }: Props = Astro.props;
   </head>
   <body>
     <slot />
-    <footer>
-      <a href="https://github.com/yashdiniz" target="_blank">
-        <Icon name="mdi:github" style="height: 3rem" />
-      </a>
-      <a href="https://linkedin.com/in/yashdiniz" target="_blank">
-        <Icon name="mdi:linkedin" style="height: 3rem" />
-      </a>
-      <a href="https://bio.link/yashdiniz" target="_blank">
-        <Icon name="gg:link" style="height: 3rem" />
-      </a>
-    </footer>
+    {
+      showFooter && (
+        <footer>
+          <a href="https://github.com/yashdiniz" target="_blank">
+            <Icon name="mdi:github" style="height: 3rem" />
+          </a>
+          <a href="https://linkedin.com/in/yashdiniz" target="_blank">
+            <Icon name="mdi:linkedin" style="height: 3rem" />
+          </a>
+          <a href="https://bio.link/yashdiniz" target="_blank">
+            <Icon name="gg:link" style="height: 3rem" />
+          </a>
+        </footer>
+      )
+    }
     <script>
       function changeCss(e) {
         // https://stackoverflow.com/questions/1769584/get-position-of-element-by-javascript
