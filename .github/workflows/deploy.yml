@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install, build, and upload your site
-        uses: withastro/action@v0
+        uses: withastro/action@v1
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -41,7 +41,7 @@ jobs:
           curl \
           -H "title: yashdiniz.github.io status update!" \
           -H "priority: $PRIORITY" \
-          -H "tags: $STATUS,yashdiniz" \
+          -H "tags: $STATUS,$GITHUB_ACTOR" \
           -H "click: $ACTION_URL" \
           -d "Commit SHA: $GITHUB_SHA" \
           "https://d-ntfy.spyke.social/ONO1dmltVNBX6dcn_yashdiniz-github-io"
