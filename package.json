@@ -17,7 +17,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.0.12",
-    "astro-icon": "^0.8.1",
+    "solid-icons": "^1.0.12",
     "solid-js": "^1.7.12"
   },
   "devDependencies": {

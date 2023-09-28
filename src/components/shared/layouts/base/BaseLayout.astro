@@ -1,6 +1,6 @@
 ---
 import "../../../../styles/global.css";
-import { Icon } from "astro-icon";
+import { FaBrandsGithub, FaBrandsLinkedin, FaSolidLink } from "solid-icons/fa";
 
 interface Props {
   title: string;
@@ -50,15 +50,15 @@ const { title, showFooter }: Props = Astro.props;
     {
       showFooter && (
         <footer>
-          <div id="float">
+          <div id="float" class="bubble">
             <a href="https://github.com/yashdiniz" target="_blank">
-              <Icon name="mdi:github" style="height: 3rem" />
+              <FaBrandsGithub size={"2rem"} />
             </a>
             <a href="https://linkedin.com/in/yashdiniz" target="_blank">
-              <Icon name="mdi:linkedin" style="height: 3rem" />
+              <FaBrandsLinkedin size={"2rem"} />
             </a>
             <a href="https://bio.link/yashdiniz" target="_blank">
-              <Icon name="gg:link" style="height: 3rem" />
+              <FaSolidLink size={"2rem"} />
             </a>
           </div>
         </footer>
@@ -70,7 +70,7 @@ const { title, showFooter }: Props = Astro.props;
         var hero = document.querySelector("#hero").getBoundingClientRect();
         var footer = document.querySelector("footer #float");
         window.innerHeight - hero.bottom > 125
-          ? (footer.style.display = undefined)
+          ? (footer.style.display = "flex")
           : (footer.style.display = "none");
       }
       changeCss();

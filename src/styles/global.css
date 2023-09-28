@@ -9,22 +9,24 @@ html, body {
     monospace;
   color: #eee;
 }
-footer {
-  opacity: 0;
-  margin: 2em;
+footer #float {
+  margin: 0.5em;
   padding: 0.5em;
   justify-content: center;
   align-items: center;
   display: flex;
   gap: 0.5em;
   color: #aaa;
+}
+footer .bubble {
   float: right;
-  border: 1px solid #aaa;
-  border-radius: 1em;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   right: 0;
+  border: 1px solid #aaa;
+  border-radius: 1em;
 }
+
 a {
   display: inline-flex;
   color: #fff;
@@ -32,7 +34,7 @@ a {
   text-decoration: none;
 }
 @media (max-width: 768px) {
-  footer {
+  footer #float {
     margin: 0.5em;
     font-size: 0.8em;
     position: sticky;
