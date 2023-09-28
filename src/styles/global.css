@@ -10,7 +10,7 @@ html, body {
   color: #eee;
 }
 footer #float {
-  margin: 0.5em;
+  margin: 0.5em 1.25em;
   padding: 0.5em;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,7 @@ footer #float {
   color: #aaa;
 }
 footer .bubble {
+  display: none;
   float: right;
   position: fixed;
   bottom: 0;
@@ -35,9 +36,11 @@ a {
 }
 @media (max-width: 768px) {
   footer #float {
-    margin: 0.5em;
+    display: none;
+    margin: 1em 0.5em;
     font-size: 0.8em;
-    position: sticky;
+    position: fixed;
+    width: 96vw;
     bottom: 0;
     float: none;
   }
