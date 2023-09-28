@@ -19,21 +19,48 @@ const { title, showFooter }: Props = Astro.props;
     <link href="/feed.xml" type="application/rss+xml" />
     <link href="/feed.atom" type="application/rss+atom" />
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="Yash Diniz, speaking mostly about software and systems architecture, along with everything else."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://yashdiniz.me" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yash Diniz" />
+    <meta
+      property="og:description"
+      content="Yash Diniz, a software engineer speaking mostly about software and systems architecture, along with everything else."
+    />
+    <meta property="og:image" content="/logo.svg" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="yashdiniz.me" />
+    <meta property="twitter:url" content="https://yashdiniz.me" />
+    <meta name="twitter:title" content="Yash Diniz" />
+    <meta
+      name="twitter:description"
+      content="Yash Diniz, a software engineer speaking mostly about software and systems architecture, along with everything else."
+    />
+    <meta name="twitter:image" content="/logo.svg" />
   </head>
   <body>
     <slot />
     {
       showFooter && (
         <footer>
-          <a href="https://github.com/yashdiniz" target="_blank">
-            <Icon name="mdi:github" style="height: 3rem" />
-          </a>
-          <a href="https://linkedin.com/in/yashdiniz" target="_blank">
-            <Icon name="mdi:linkedin" style="height: 3rem" />
-          </a>
-          <a href="https://bio.link/yashdiniz" target="_blank">
-            <Icon name="gg:link" style="height: 3rem" />
-          </a>
+          <div id="float">
+            <a href="https://github.com/yashdiniz" target="_blank">
+              <Icon name="mdi:github" style="height: 3rem" />
+            </a>
+            <a href="https://linkedin.com/in/yashdiniz" target="_blank">
+              <Icon name="mdi:linkedin" style="height: 3rem" />
+            </a>
+            <a href="https://bio.link/yashdiniz" target="_blank">
+              <Icon name="gg:link" style="height: 3rem" />
+            </a>
+          </div>
         </footer>
       )
     }
@@ -41,10 +68,10 @@ const { title, showFooter }: Props = Astro.props;
       function changeCss(e) {
         // https://stackoverflow.com/questions/1769584/get-position-of-element-by-javascript
         var hero = document.querySelector("#hero").getBoundingClientRect();
-        var footer = document.querySelector("footer");
+        var footer = document.querySelector("footer #float");
         window.innerHeight - hero.bottom > 125
-          ? (footer.style.opacity = 1)
-          : (footer.style.opacity = 0);
+          ? (footer.style.display = undefined)
+          : (footer.style.display = "none");
       }
       changeCss();
       window.addEventListener("scroll", changeCss, false);
