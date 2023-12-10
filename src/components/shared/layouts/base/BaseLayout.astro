@@ -1,6 +1,11 @@
 ---
 import "../../../../styles/global.css";
-import { FaBrandsGithub, FaBrandsLinkedin, FaSolidLink } from "solid-icons/fa";
+import {
+  FaBrandsGithub,
+  FaBrandsLinkedin,
+  FaSolidLink,
+  FaBrandsTelegram,
+} from "solid-icons/fa";
 
 interface Props {
   title: string;
@@ -51,6 +56,9 @@ const { title, showFooter }: Props = Astro.props;
       showFooter && (
         <footer>
           <div id="float" class="bubble">
+            <a href="https://t.me/yashdiniz" target="_blank">
+              <FaBrandsTelegram size={"3rem"} />
+            </a>
             <a href="https://github.com/yashdiniz" target="_blank">
               <FaBrandsGithub size={"3rem"} />
             </a>
