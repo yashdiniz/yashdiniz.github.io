@@ -5,6 +5,12 @@ import AsciiSvg from "../components/core/term/TermAsciiSvg.astro";
 import Termlink from "../components/core/term/TermLink.astro";
 import Termbox from "../components/shared/TermBox/TermBox.astro";
 import Yash from "../assets/asciiface.tsx";
+import {
+  FaBrandsGithub,
+  FaBrandsLinkedin,
+  FaSolidLink,
+  FaBrandsTelegram,
+} from "solid-icons/fa";
 ---
 
 <Base title="Yash Diniz" showFooter>
@@ -15,7 +21,7 @@ import Yash from "../assets/asciiface.tsx";
         <AsciiSvg text={Yash} height="100%" animate />
         <div>
           <h1>Yash Diniz</h1>
-          <p>👨‍💻 Software Engineer</p>
+          <p>👨‍💻 Systems & Software</p>
           <p>
             Cofounder at <Termlink
               href="https://spyke.social"
@@ -23,6 +29,21 @@ import Yash from "../assets/asciiface.tsx";
             />.
           </p>
           <p>🌏📍Goa, India</p>
+          <p>Connect with me!</p>
+          <p>
+            <a href="https://t.me/yashdiniz" target="_blank">
+              <FaBrandsTelegram size={"2rem"} />
+            </a>&nbsp;
+            <a href="https://github.com/yashdiniz" target="_blank">
+              <FaBrandsGithub size={"2rem"} />
+            </a>&nbsp;
+            <a href="https://linkedin.com/in/yashdiniz" target="_blank">
+              <FaBrandsLinkedin size={"2rem"} />
+            </a>&nbsp;
+            <a href="https://bio.link/yashdiniz" target="_blank">
+              <FaSolidLink size={"2rem"} />
+            </a>
+          </p>
         </div>
       </div>
       <Termlink href="#about" text="Scroll down…" animate />
@@ -31,51 +52,54 @@ import Yash from "../assets/asciiface.tsx";
   <div style="margin: 80px auto; padding: 10px; max-width: 768px;" id="about">
     <h2>About Me</h2>
     <p>
-      I am determined about solving the world's problems through my skills. Have
-      built nodeJS/expressJS servers, and recently completed projects in Go.
-      Passionate about how to optimize code to improve performance, hence prefer
-      minimalistic and simple solutions for both the user and developer.
-      Advocate of DRY, using design patterns to make code maintainable. Ready to
-      trade DRY for maintainable code.
+      Driven by my desire to solve world problems (and my problems) through
+      technology, I leverage my passion for software, engineering, and systems
+      architecture. I tinker mainly in Go and NodeJS, and I'm also a co-founder
+      of Spyke Social.
     </p>
     <p>
-      I consider Security equally important, and strive to ensure that the
-      software I design and help build is as secure as I can make it. Always
-      interested in system design, machine intelligence, IoT and data analytics.
-      Good at documentation. Prefer modularity in coding and micro-service
-      architectures.
+      My expertise lies in building and designing microservices deployed using
+      <a href="https://en.wikipedia.org/wiki/Cloud-native_computing"
+        >cloud-native solutions</a
+      > (like Docker & Kubernetes), with a relentless focus on reducing vendor
+      lock-in while offering simplicity, maintainability, and performance. I'm a
+      strong advocate of DRY principles and design patterns, ensuring my code is
+      secure, well-documented, and easy to understand.
     </p>
-    <h2>Projects</h2>
     <p>
-      Here are some projects I've worked on. FOCUSA, ASMDV, QMjs, NPWS, FRUI,
-      Some Parking Solution Hobbies include reading, learning, coding, and
-      documentation. I prefer being the one who works behind the scenes, not
-      entering the limelight, changing one life at a time. Other recent
-      interests include GraphQL, pouchDB & couchDB, Promises, oneM2M and
-      participating in hackathons. Currently a software architect at Spyke
-      Social.
+      Beyond my coding skills, I have a deep interest in systems design, machine
+      intelligence, IoT, and data engineering. I'm constantly learning and
+      exploring new technologies and methodologies to improve my craft and
+      contribute to a better future.
     </p>
-    <h2>Previous Experience</h2>
     <p>
-      DearJarvis Helped organise hackathons like debuggerX and Inspirathon.
-      Participated at the Smart Panaji Hackathon 2020 and proposed this solution
-      for the Smart Mobility Challenge. Reached the quarter-finals of the IICDC
-      2019.
+      Connect with me on <a href="https://t.me/yashdiniz">Telegram</a> or <a
+        href="https://linkedin.com/in/yashdiniz">LinkedIn</a
+      >.
+      <quote
+        >While I appreciate your interest in connecting, I value your privacy
+        and currently limit email contact. Please connect through the channels
+        listed above.</quote
+      >
     </p>
     <h2>Caveats</h2>
     <p>
-      I believed that databases were really inefficient and slow, and just too
-      complex at attempting to be an all-in-one solution and failing miserably.
-      Thus, I had created my own doc-store using nodeJS, which gave the server a
-      huge performance boost. While mine isn't public yet due to long term
-      performance issues, CouchDB caters to everything my implementation suffers
-      from, but better. I am addicted to learning and continuously discovering
-      new things, and I love to experience the thrill and joy of building new
-      applications. I tend to choose this sometimes over food, sleep, and even
-      hygiene. I am working on my time management. Recently discovered energy
-      management, and that really vibed with the way I operate. I normally like
-      to explain a lot and provide detailed descriptions for any question asked.
-      Being brief is something I've been working on.
+      I am addicted to learning and continuously discovering new things, and I
+      love to experience the thrill and joy of building new applications. I tend
+      to choose this sometimes over food, sleep, and even hygiene. Recently
+      discovered energy management, and that really vibed with the way I
+      operate, maybe it's better than time management?
+    </p>
+    <p>
+      I do have difficulty delegating tasks, been working on building trust and
+      collaboration. I need to get to know you well before I can collaborate
+      with you, so I guess that's a good thing?
+    </p>
+    <p>
+      I normally tend to over-explain and provide detailed and descriptive
+      answers for any question asked. Friends used to call me a college
+      professor who explained stuff really well ;) Being brief is something I've
+      been working on.
     </p>
   </div>
   <style define:vars={{ yellow: colors.yellow }}>
