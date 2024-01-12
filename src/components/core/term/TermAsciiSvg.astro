@@ -17,6 +17,7 @@ const maxlen = Math.max(...lines.map((line) => line.length));
   viewBox={`0 0 ${maxlen * 9} ${lines.length * 17}`}
   width="100%"
   height="100%"
+  preserveAspectRatio="xMidYMin slice"
 >
   <g id="text"
     >{
