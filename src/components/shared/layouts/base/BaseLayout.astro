@@ -79,10 +79,10 @@ const { title, showFooter }: Props = Astro.props;
       )
     }
     <script>
-      function changeCss(e) {
+      function changeCss() {
         // https://stackoverflow.com/questions/1769584/get-position-of-element-by-javascript
-        var hero = document.querySelector("#hero").getBoundingClientRect();
-        var footer = document.querySelector("footer #float");
+        var hero = document.querySelector("#hero")?.getBoundingClientRect()!;
+        var footer = document.querySelector("footer #float")!;
         window.innerHeight - hero.bottom > 125
           ? (footer.style.display = "flex")
           : (footer.style.display = "none");

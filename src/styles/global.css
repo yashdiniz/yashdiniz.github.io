@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   background-color: #0f0f0f;
@@ -9,6 +10,7 @@ html, body {
     monospace;
   color: #aaa;
 }
+
 footer #float {
   margin: 0.5em 1.25em;
   padding: 0.5em;
@@ -18,6 +20,7 @@ footer #float {
   gap: 0.5em;
   color: #aaa;
 }
+
 footer .bubble {
   display: none;
   float: right;
@@ -34,12 +37,13 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+
 @media (max-width: 768px) {
   footer #float {
-    display: none;
+    display: flex;
     margin: 1em 0.5em;
     font-size: 0.8em;
-    position: fixed;
+    position: relative;
     width: 96vw;
     bottom: 0;
     float: none;
