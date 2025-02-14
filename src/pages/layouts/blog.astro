@@ -1,0 +1,30 @@
+---
+import colors from "../../components/shared/colors.tsx";
+import Base from "../../components/shared/layouts/base/BaseLayout.astro";
+import Termlink from "../../components/core/term/TermLink.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Base title={frontmatter.title}>
+  <div style="margin: 80px auto; padding: 10px; max-width: 768px;">
+  <h1>{frontmatter.title}</h1>
+  <p>
+    Written by <Termlink href="/" text={frontmatter.author} animate />
+  </p>
+  <p>{frontmatter.description}</p>
+  <hr />
+  <div style="margin: 40px auto;">
+    <slot />
+  </div>
+  </div>
+  <style define:vars={{ yellow: colors.yellow }}>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--yellow);
+    }
+  </style>
+</Base>
