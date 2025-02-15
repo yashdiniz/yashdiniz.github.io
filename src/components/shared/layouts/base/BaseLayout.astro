@@ -1,11 +1,11 @@
 ---
 import "../../../../styles/global.css";
-import {
-  FaBrandsGithub,
-  FaBrandsLinkedin,
-  FaSolidLink,
-  FaBrandsTelegram,
-  FaSolidCalendar,
+import { 
+  FaBrandsGithub, 
+  FaBrandsLinkedin, 
+  FaSolidLink, 
+  FaBrandsTelegram, 
+  FaSolidCalendar, 
 } from "solid-icons/fa";
 
 interface Props {
@@ -90,11 +90,14 @@ const { title, showFooter }: Props = Astro.props;
         </footer>
       )
     }
-    <script>
+    <script type="text/partytown">
       function changeCss() {
         // https://stackoverflow.com/questions/1769584/get-position-of-element-by-javascript
-        var hero = document.querySelector("#hero")?.getBoundingClientRect()!;
-        var footer = document.querySelector("footer #float")!;
+        var hero = document.querySelector("#hero")?.getBoundingClientRect();
+        var footer = document.querySelector("footer #float");
+        if (!(hero && footer)) {
+          return
+        }
         window.innerHeight - hero.bottom > 125
           ? (footer.style.display = "flex")
           : (footer.style.display = "none");

@@ -1,0 +1,39 @@
+---
+import colors from "../../colors.tsx";
+import Base from "../base/BaseLayout.astro";
+import Termlink from "../../../core/term/TermLink.astro";
+const { frontmatter } = Astro.props;
+
+const title = frontmatter?.title || "Hello World"; // Default title if frontmatter?.title is undefined
+const author = frontmatter?.author || "Yash Diniz"; // Default author if frontmatter?.author is undefined
+const description = frontmatter?.description || "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
+---
+
+<Base title={title}>
+  <div style="margin: 80px auto; padding: 10px; max-width: 768px;">
+    <h1>{title}</h1>
+    <p>
+      Written by <Termlink href="/" text={author} animate />
+    </p>
+    <p>{description}</p>
+    <hr />
+    <div style="margin: 40px auto;">
+      <slot />
+    </div>
+    <hr />
+    <div style="margin: 30px auto; display: flex; align-items: center; justify-content: center;">
+      <span style="padding: 10px;">Made with ❤️ by </span>
+      <Termlink href="/" text="Yash Diniz" animate />
+    </div>
+  </div>
+  <style define:vars={{ yellow: colors.yellow }}>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--yellow);
+    }
+  </style>
+</Base>
