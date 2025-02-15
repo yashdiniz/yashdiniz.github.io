@@ -1,5 +1,6 @@
 ---
 import Base from "../components/shared/layouts/base/BaseLayout.astro";
+import Termlink from "../components/core/term/TermLink.astro";
 const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
 ---
 <Base>
