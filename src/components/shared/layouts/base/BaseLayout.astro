@@ -36,7 +36,7 @@ const { title, showFooter }: Props = Astro.props;
     <meta property="og:title" content="Yash Diniz" />
     <meta
       property="og:description"
-      content="Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."
+      content={title ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
     <meta property="og:image" content="/logo.svg" />
 

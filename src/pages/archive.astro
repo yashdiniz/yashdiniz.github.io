@@ -9,7 +9,7 @@ const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
       {
         posts.map((post) => (
           <li>
-            <a href={post.url}>{post.frontmatter.title}</a>
+            <a href={post.url}>{post.frontmatter.title}</a> ({new Date(post.frontmatter.date).toDateString()})
           </li>
         ))
       }
