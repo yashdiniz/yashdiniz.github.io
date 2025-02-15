@@ -26,13 +26,8 @@ const description = frontmatter?.description || "A blog about software dev, tech
       <Termlink href="/" text="Yash Diniz" animate />
     </div>
   </div>
-  <style define:vars={{ yellow: colors.yellow }}>
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+  <style is:global define:vars={{ yellow: colors.yellow }}>
+    h1, h2, h3, h4, h5, h6 {
       color: var(--yellow);
     }
   </style>
