@@ -13,12 +13,12 @@ interface Props {
   showFooter?: boolean;
 }
 
-const { title, showFooter }: Props = Astro.props;
+const { title, description, showFooter }: Props = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <title>{title}</title>
+    <title>{title ? `${title} | Yash Diniz` : "Yash Diniz"}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
@@ -27,16 +27,16 @@ const { title, showFooter }: Props = Astro.props;
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta
       name="description"
-      content="Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."
+      content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://yashdiniz.me" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Yash Diniz" />
+    <meta property="og:title" content={title ? `${title} | Yash Diniz` : "Yash Diniz"} />
     <meta
       property="og:description"
-      content={title ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
+      content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
     <meta property="og:image" content="/logo.svg" />
 

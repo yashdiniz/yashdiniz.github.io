@@ -1,0 +1,48 @@
+---
+import colors from "../colors.tsx";
+---
+<header>
+  <nav>
+    <div class="logo">
+      <h1 class="logo"><a href="/">Yash Diniz</a></h1>
+    </div>
+    <ul id="menu">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/">About</a></li>
+    </ul>
+  </nav>
+</header>
+<style is:global define:vars={{ linkHover: colors.linkHover, default: colors.default }}>
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-width: 1024px;
+    justify-content: space-between;
+    line-height: 60px;
+  }
+  div.logo {
+    flex-wrap: inherit;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  #menu, #menu li {
+    display: flex;
+    margin: auto 16px;
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  h1.logo a {
+    color: var(--default);
+  }
+  div.logo a:hover {
+    color: var(--linkHover);
+    text-decoration: none;
+  }
+</style>
