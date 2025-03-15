@@ -1,0 +1,48 @@
+---
+import Base from "../components/shared/layouts/base/BaseLayout.astro";
+import Header from "../components/shared/Header/Header.astro";
+import Termlink from "../components/core/term/TermLink.astro";
+import colors from "../components/shared/colors.tsx";
+import {
+  FiRss,
+} from "solid-icons/fi";
+
+const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+---
+<Base>
+  <Header />
+  <div style="margin: 80px auto; padding: 10px; max-width: 768px;">
+    <h1 class="archive-title">
+      Posts
+      <a href="/feed.xml" title="RSS"><FiRss size={"1.5rem"} /></a>
+    </h1>
+    <ul style="list-style: none; padding: 10px;">
+      {
+        posts.map((post) => (
+          <li>
+            <div style="margin-bottom: 20px; background-color: #5a;">
+              <a href={post.url}>{post.frontmatter.title}</a>
+              <br />({new Date(post.frontmatter.date).toDateString()})
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <hr />
+    <div style="margin: 30px auto; display: flex; align-items: center; justify-content: center;">
+      <span style="padding: 10px;">Made with ❤️ by </span>
+      <Termlink href="/" text="Yash Diniz" animate />
+    </div>
+  </div>
+</Base>
+<style is:global define:vars={{ white: colors.white }}>
+  body {
+    font-size: 18px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+  }
+  h1.archive-title {
+    font-size: 40px;
+  }
+</style>
