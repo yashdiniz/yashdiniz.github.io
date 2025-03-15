@@ -4,11 +4,9 @@ body {
   padding: 0px;
   background-color: #0f0f0f;
   scroll-behavior: smooth;
-  font:
-    1em "Courier",
-    "Inconsolata",
-    monospace;
-  color: #aaa;
+  font-family: 'Fira Code', monospace;
+  color: #c4c4c5;
+  line-height: 1.5;
 }
 
 footer #float {
@@ -27,11 +25,15 @@ footer .bubble {
   position: fixed;
   bottom: 0;
   right: 0;
-  border: 1px solid #aaa;
-  border-radius: 1em;
 }
 
 a {
+  display: inline-flex;
+  color: #aee;
+  text-decoration: none;
+}
+
+a:hover {
   display: inline-flex;
   color: #fff;
   font-weight: bold;

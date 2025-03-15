@@ -7,4 +7,8 @@ export default {
   red: '#ff0000',
   white: '#ffffff',
   yellow: '#ffff00',
+  default: '#c4c4c5',
+  link: '#aee',
+  linkHover: '#fff',
+  linkActive: '#cee',
 }
