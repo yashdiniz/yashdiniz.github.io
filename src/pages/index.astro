@@ -14,14 +14,14 @@ import {
 } from "solid-icons/fa";
 ---
 
-<Base title="Yash Diniz" showFooter>
+<Base showFooter>
   <div style="margin: 20px 20px 40px 20px;">
     <Termbox command="neofetch whoami --source ascii.txt ">
       <div id="hero">
         <!-- Mugshot to asciiart credits: asciiart.eu -->
         <AsciiSvg text={Yash} height="100%" animate />
         <div>
-          <h1>Yash Diniz</h1>
+          <h1 class="name">Yash Diniz</h1>
           <p>👨‍💻 Software Engineering</p>
           <p>
             At <a href="http://bluealtair.com">Blue Altair</a>.
@@ -52,7 +52,7 @@ import {
               <FaSolidLink size={"2rem"} />
             </a>
           </p>
-          <p>Check out my <a href="/archive">blog archive</a>.</p>
+          <p>Check out my <a href="/posts">blog archive</a>.</p>
         </div>
       </div>
       <Termlink href="#about" text="Scroll down…" animate />
@@ -63,7 +63,7 @@ import {
     <p>
       I’m a backend engineer who's dedicated 3+ years building in Go and
       Node.js. I have worked in IoT, sustainability, and e-commerce projects,
-      ensuring clean, maintainable architectures.
+      always prioritizing clean, maintainable architectures.
     </p>
     <p>
       At <a href="http://spintly.com">Spintly</a>, I redesigned their core
@@ -80,7 +80,7 @@ import {
     <p>
       My technical understanding covers:
       <ul>
-        <li><b>APIs</b>: REST, GraphQL, and tRPC.</li>
+        <li><b>APIs</b>: REST, tRPC and GraphQL.</li>
         <li>
           <b>Cloud</b>: Docker-based microservices to minimize vendor lock-in.
         </li>
@@ -88,7 +88,19 @@ import {
           <b>Code Quality</b>: DRY principles and OWASP standards for secure,
           reusable code.
         </li>
+        <li>
+          <b>DevOps</b>: Built CI/CD pipelines to automate deployments, 
+          using GitHub Actions and Docker.
+        </li>
+        <li>
+          <b>MLOps</b>: Proficient in using MLFlow, Databricks, and 
+          deploying models built with XGBoost, CatBoost, Scikit-learn, and pandas.
+        </li>
       </ul>
+    </p>
+    <p>
+    I’m always evolving — currently exploring serverless architectures using 
+    tRPC and tinkering with MLOps.
     </p>
     <p>
       In addition to my professional endeavors, I have also been an independent
@@ -110,7 +122,6 @@ import {
         channels listed above.</quote
       >
     </p>
-    <p>I’m always evolving — currently exploring serverless architectures.</p>
     <p>
       <b>Let’s build software that lasts.</b>
     </p>
@@ -138,14 +149,18 @@ import {
     <!--   </audio> -->
     <!-- </p> -->
   </div>
-  <style define:vars={{ yellow: colors.yellow }}>
+  <style define:vars={{ white: colors.white, yellow: colors.yellow }}>
+    h1.name {
+      color: var(--yellow);
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      color: var(--yellow);
+      color: var(--white);
     }
     #hero {
       display: flex;
