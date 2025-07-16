@@ -1,5 +1,5 @@
 ---
-import colors from "../../colors.tsx";
+import colors from "../../colors";
 import Base from "../base/BaseLayout.astro";
 import Termlink from "../../../core/term/TermLink.astro";
 import Header from "../../Header/Header.astro";
@@ -9,7 +9,8 @@ const title = frontmatter?.title || "Hello World"; // Default title if frontmatt
 const pubDate = frontmatter?.pubDate; // Default pubDate if frontmatter?.pubDate is undefined
 const author = frontmatter?.author || "Yash Diniz"; // Default author if frontmatter?.author is undefined
 const authorLink = frontmatter?.authorLink || "/"; // Default authorLink if frontmatter?.authorLink is undefined
-const description = frontmatter?.description || "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
+const description =
+  frontmatter?.description || "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
 ---
 
 <Base title={title}>
@@ -18,12 +19,9 @@ const description = frontmatter?.description || "A blog about software dev, tech
     <header>
       <h1 class="post-title">{title}</h1>
       <p class="post-meta">
-        {
-          pubDate ? `${new Date(pubDate).toDateString()}  ·`
-            : ""
-        }&nbsp;
+        {pubDate ? `${new Date(pubDate).toDateString()}  ·` : ""}&nbsp;
         <Termlink href={authorLink} text={author} animate />
-        <br /><br />  
+        <br /><br />
         {description}
       </p>
     </header>
@@ -32,7 +30,9 @@ const description = frontmatter?.description || "A blog about software dev, tech
       <slot />
     </div>
     <hr />
-    <div style="margin: 30px auto; display: flex; align-items: center; justify-content: center;">
+    <div
+      style="margin: 30px auto; display: flex; align-items: center; justify-content: center;"
+    >
       <span style="padding: 10px;">Made with ❤️ by </span>
       <Termlink href="/" text="Yash Diniz" animate />
     </div>
@@ -41,7 +41,12 @@ const description = frontmatter?.description || "A blog about software dev, tech
     body {
       font-size: 18px;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--white);
     }
     h1.post-title {
