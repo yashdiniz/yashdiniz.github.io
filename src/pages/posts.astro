@@ -5,7 +5,17 @@ import Termlink from "../components/core/term/TermLink.astro";
 import colors from "../components/shared/colors";
 import { FiRss } from "solid-icons/fi";
 
-const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+interface Post {
+  url: string;
+  frontmatter: {
+    title: string;
+    date: Date;
+  };
+}
+
+const posts: Post[] = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true })
+);
 ---
 
 <Base>
@@ -31,7 +41,7 @@ const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
     <div
       style="margin: 30px auto; display: flex; align-items: center; justify-content: center;"
     >
-      <span style="padding: 10px;">Made with ❤️ by </span>
+      <span style="padding: 10px;">Made with ❤️ by</span>
       <Termlink href="/" text="Yash Diniz" animate />
     </div>
   </div>

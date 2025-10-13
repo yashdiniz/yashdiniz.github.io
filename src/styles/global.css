@@ -29,15 +29,15 @@ footer .bubble {
 
 a {
   display: inline-flex;
-  color: #aee;
+  color: #0c0;
   text-decoration: none;
+  transition: all 0.2s;
 }
 
 a:hover {
   display: inline-flex;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
+  color: #aee;
+  text-shadow: 0 0 5px #aee;
 }
 
 @media (max-width: 768px) {
