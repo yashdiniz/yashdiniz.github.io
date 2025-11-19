@@ -27,7 +27,7 @@ const posts: Post[] = Object.values(
     </h1>
     <ul style="list-style: none; padding: 10px;">
       {
-        posts.map((post) => (
+        posts.reverse().map((post) => (
           <li>
             <div style="margin-bottom: 20px; background-color: #5a;">
               <a href={post.url}>{post.frontmatter.title}</a>
