@@ -13,7 +13,7 @@ const description =
   frontmatter?.description || "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
 ---
 
-<Base title={title}>
+<Base title={title} description={description} author={author}>
   <Header />
   <div style="margin: 20px auto; padding: 10px; max-width: 768px;">
     <header>

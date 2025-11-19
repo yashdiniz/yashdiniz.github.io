@@ -11,21 +11,22 @@ import {
 interface Props {
   title?: string;
   description?: string;
+  author?: string;
   showFooter?: boolean;
   canonical?: string;
 }
 
-const { title, description, showFooter, canonical }: Props = Astro.props;
+const { title, description, author, showFooter, canonical }: Props = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <title>{title ? `${title} | Yash Diniz` : "Yash Diniz - Software Engineer"}</title>
+    <title>{title && author ? `${title} | ${author}` : "Yash Diniz - Software Engineer"}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index follow" />
-    <link rel="canonical" href={canonical || Astro.url.href} />
+    <link rel="canonical" href={canonical ?? Astro.url.href} />
     <link href="/feed.xml" type="application/rss+xml" />
     <link href="/feed.atom" type="application/rss+atom" />
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
@@ -37,7 +38,7 @@ const { title, description, showFooter, canonical }: Props = Astro.props;
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://yashdiniz.me" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title ? `${title} | Yash Diniz` : "Yash Diniz"} />
+    <meta property="og:title" content={title && author ? `${title} | ${author}` : "Yash Diniz"} />
     <meta
       property="og:description"
       content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
