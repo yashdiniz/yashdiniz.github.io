@@ -5,7 +5,7 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
+    branches: [main]
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
@@ -37,11 +37,13 @@ jobs:
           # https://stackoverflow.com/a/70566764/13227113
           ACTION_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PRIORITY: ${{ job.status == 'failure' && 'high' || 'default' }}
+          N8N_TOKEN: ${{ secrets.N8N_TOKEN }}
         run: |
           curl \
           -H "title: yashdiniz.github.io status update!" \
           -H "priority: $PRIORITY" \
           -H "tags: $STATUS,$GITHUB_ACTOR" \
           -H "click: $ACTION_URL" \
+          -H "Authorization: Bearer $N8N_TOKEN" \
           -d "Commit SHA: $GITHUB_SHA" \
-          "https://d-ntfy.spyke.social/ONO1dmltVNBX6dcn_yashdiniz-github-io"
+          "https://ntfy.yashdiniz.me/yashdiniz-github-io_build_status"
