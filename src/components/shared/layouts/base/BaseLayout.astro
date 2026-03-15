@@ -17,6 +17,8 @@ interface Props {
 }
 
 const { title, description, author, showFooter, canonical }: Props = Astro.props;
+const truncate = (input: string | undefined, maxlen: number) =>
+  input && input.length > maxlen ? `${input.substring(0, maxlen)}…` : input;
 ---
 
 <html lang="en">
@@ -32,7 +34,7 @@ const { title, description, author, showFooter, canonical }: Props = Astro.props
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta
       name="description"
-      content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
+      content={truncate(description, 296) ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
 
     <!-- Facebook Meta Tags -->
@@ -41,7 +43,7 @@ const { title, description, author, showFooter, canonical }: Props = Astro.props
     <meta property="og:title" content={title && author ? `${title} | ${author}` : "Yash Diniz"} />
     <meta
       property="og:description"
-      content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
+      content={truncate(description, 296) ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
     <meta property="og:image" content="/logo.svg" />
 
@@ -54,7 +56,7 @@ const { title, description, author, showFooter, canonical }: Props = Astro.props
     <meta name="twitter:creator" content="@yashdiniz" />
     <meta
       name="twitter:description"
-      content={description ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
+      content={truncate(description, 296) ?? "Yash Diniz, a software engineer speaking mostly about software and cloud, along with everything else."}
     />
     <meta name="twitter:image" content="/logo.svg" />
     <!-- Google tag (gtag.js) -->
