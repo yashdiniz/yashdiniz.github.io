@@ -9,8 +9,11 @@ const title = frontmatter?.title || "Hello World"; // Default title if frontmatt
 const pubDate = frontmatter?.pubDate; // Default pubDate if frontmatter?.pubDate is undefined
 const author = frontmatter?.author || "Yash Diniz"; // Default author if frontmatter?.author is undefined
 const authorLink = frontmatter?.authorLink || "/"; // Default authorLink if frontmatter?.authorLink is undefined
+const truncate = (input: string, maxlen: number) =>
+  input.length > maxlen ? `${input.substring(0, maxlen)}…` : input;
 const description =
-  frontmatter?.description || "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
+  truncate(frontmatter?.description, 296) ||
+  "A blog about software dev, tech, and life."; // Default description if frontmatter?.description is undefined
 ---
 
 <Base title={title} description={description} author={author}>
